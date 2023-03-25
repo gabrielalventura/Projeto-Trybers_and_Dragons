@@ -9,7 +9,6 @@ export default class PVP extends Battle {
     super(character1);
     this._character1 = character1;
     this._character2 = character2;
-    super.fight();
   }
 
   fight(): number {
