@@ -19,5 +19,5 @@ export default class PVP extends Battle {
     return this._character1.lifePoints === -1 ? -1 : 1;
   }
 
-  // nesse caso em especifico faz mais sentido o uso do operador || ao inves do operador && uma vez que basta que uma das condições seja satisfeita para se obter um vencedor.
+  // Inicialmente pensei na lógica para sobrescrever fight utilizando operador ||, no entanto utilizando operador || não passa pois para haver vitória uma dos characteres deve necessariamente ter lifePoints > 0 então a condição só se repetira enquanto os dois forem maior que zero, obrigatoriamente tendo um chegado a zero, o laço de repetição se encerra retornando o vencedor;
 }
