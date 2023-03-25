@@ -29,4 +29,45 @@ export default class Character implements Fighter {
       amount: getRandomInt(1, 10),
     };
   }
+
+  get race(): Race {
+    return this._race;
+  }
+
+  get archetype(): Archetype {
+    return this._archetype;
+  }
+
+  get lifePoints(): number {
+    return this._lifePoints;
+  }
+
+  get strength(): number {
+    return this._strength;
+  }
+
+  get defense(): number {
+    return this._defense;
+  }
+
+  get dexterity(): number {
+    return this._dexterity;
+  }
+
+  get energy(): Energy {
+    return { ...this._energy };
+  }
+
+  receiveDamage(attackPoints: number): number {
+    const damage = attackPoints - (this._defense);
+    if (damage > 0) {
+      this._lifePoints -= damage;
+    } else {
+      this._lifePoints -= 1;
+    }
+    if (this._lifePoints <= 0) {
+      this._lifePoints = -1;
+    }
+    return this._lifePoints;
+  }
 }
