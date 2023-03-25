@@ -84,5 +84,6 @@ export default class Character implements Fighter {
     this._dexterity += getRandomInt(1, 10);
     this._defense += getRandomInt(1, 10); 
     this._energy.amount = 10; // chamar somente a chave necessária no objeto;
+    this._lifePoints = this._maxLifePoints;
   }
 }
