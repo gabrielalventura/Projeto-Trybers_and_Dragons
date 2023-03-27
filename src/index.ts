@@ -1,3 +1,4 @@
+import { PVP } from './Battle';
 import Character from './Character';
 import Dragon from './Dragon';
 import Monster from './Monster';
@@ -11,8 +12,10 @@ player1.levelUp();
 player1.levelUp();
 player1.levelUp();
 
-const monster1 = new Monster('monster1');
-const monster2 = new Dragon('monster2');
+const monster1 = new Monster();
+const monster2 = new Dragon();
+
+const pvp = new PVP(player2, player3);
 
 export {
   player1,
@@ -20,4 +23,5 @@ export {
   player3,
   monster1,
   monster2,
+  pvp,
 };
